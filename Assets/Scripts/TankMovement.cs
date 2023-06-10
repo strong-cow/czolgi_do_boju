@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class Tank_movement : MonoBehaviour
+public class TankMovement : MonoBehaviour
 {
     public float MaxEnginePower;
     public float MaxSteeringPower;
@@ -23,7 +23,12 @@ public class Tank_movement : MonoBehaviour
         if (target.CompareTag("Player2") == true) { Player2Control(); }
 
     }
-    
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("Tank collided with " + collision);
+    }
+
     void Player1Control()
     {
 
