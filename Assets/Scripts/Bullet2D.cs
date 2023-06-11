@@ -6,7 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 public class Bullet2D : MonoBehaviour
 {
     public GameObject explosionAnimationPrefab;
-
+    public GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,13 @@ public class Bullet2D : MonoBehaviour
         } else
         {
             //jeżeli zderzyliśmy się z czymś innym, pokaż animację wybuchu
-            Instantiate(explosionAnimationPrefab, this.gameObject.transform.position, Quaternion.identity);
+            GameObject animation = Instantiate(explosionAnimationPrefab, this.gameObject.transform.position, Quaternion.identity);
+
+            //od razu usuń pocisk
+            Destroy(this.gameObject);
+
+            //a po zadanym czasie usuń animację wybuchu
+            Destroy(animation, 1);
         }
     }
 }

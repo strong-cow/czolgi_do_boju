@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8168531316974473568}
   - component: {fileID: 8168531316974473598}
   - component: {fileID: 8168531316974473599}
+  - component: {fileID: -9218633431299854926}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Player1
@@ -84,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e23b153d3384c6c8641435702da422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7896394090879694966, guid: f221473431819466ab54b6fcdd2baa0e, type: 3}
+  bulletPrefab: {fileID: 7896394090879694966, guid: f221473431819466ab54b6fcdd2baa0e, type: 3}
   target: {fileID: 8168531316974473573}
 --- !u!61 &8168531316974473599
 BoxCollider2D:
@@ -112,6 +113,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42502016, y: 0.41890332}
   m_EdgeRadius: 0
+--- !u!114 &-9218633431299854926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168531316974473573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ece3df14a20949beb0e824590d67ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8168531317911096024}
+  blueSprite: {fileID: 21300000, guid: 34654908cf1514f12acffc0d7b4ad1a6, type: 3}
+  redSprite: {fileID: 21300000, guid: 32215c41cc1d9464a8a9a3073dc97b6a, type: 3}
 --- !u!1 &8168531317911096026
 GameObject:
   m_ObjectHideFlags: 0
